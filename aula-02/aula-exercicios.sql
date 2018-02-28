@@ -1,6 +1,6 @@
 --Alterar senha: alter user rm77324  identified by 100597
 
--- 1) Desenvolver um bloco PL/SQL que exiba o nome e a idade armazenados em variáveis.
+-- 1) Desenvolver um bloco PL/SQL que exiba o nome e a idade armazenados em variÃ¡veis.
 set serveroutput on
 
 declare
@@ -9,10 +9,10 @@ declare
 begin
     v_nome := 'Ruan';
     v_idade := 20;
-    dbms_output.put_line('O nome é '||v_nome||' e a idade dele é '||v_idade);
+    dbms_output.put_line('O nome Ã© '||v_nome||' e a idade dele Ã© '||v_idade);
 end;
 
---2) Desenvolver um bloco PL/SQL que receba 5 valores e armazene a média dos 5 valores. Armazenar somente números inteiros.
+--2) Desenvolver um bloco PL/SQL que receba 5 valores e armazene a mÃ©dia dos 5 valores. Armazenar somente nÃºmeros inteiros.
 
 declare
     v_number1 number;
@@ -28,7 +28,7 @@ begin
     v_number4 := &4;
     v_number5 := &5;
     v_media := ((v_number1+v_number2+v_number3+v_number4+v_number5)/5);
-    dbms_output.put_line('A média desses números é: '||v_media);
+    dbms_output.put_line('A mÃ©dia desses nÃºmeros Ã©: '||v_media);
 end;
 
 --3) Desenvolver um bloco PL/SQL que receba o nome completo e armazene somente o primeiro nome.
@@ -42,6 +42,16 @@ begin
     dbms_output.put_line(substr(v_nome,1,instr(v_nome,' ')-1));
 end;
 
---4) Desenvolver um bloco PL/SQL que receba um nome completo em letras minúsculas e imprima todos os nomes com a primeira letra em maiúsculo.
+--4) Desenvolver um bloco PL/SQL que receba um nome completo em letras minÃºsculas e imprima todos os nomes com a primeira letra em maiÃºsculo.
+
+set serveroutput on
+
+declare
+    v_nome varchar2(80);
+begin
+    v_nome := 'ruan mateus francelino da silva';
+    dbms_output.put_line(initcap(v_nome));
+end;
 
 --5) Desenvolver um bloco PL/SQL que receba uma data no formato 'dd/mm/yyyy' e imprima o dia da semana.
+
