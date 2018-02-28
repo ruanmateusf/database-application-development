@@ -27,14 +27,15 @@ begin
     v_number3 := &3;
     v_number4 := &4;
     v_number5 := &5;
-    v_media := ((v_number1+v_number2+v_number3+v_number4+v_number5)/5);
+    v_media := trunch((v_number1+v_number2+v_number3+v_number4+v_number5)/5);
     dbms_output.put_line('A média desses números é: '||v_media);
 end;
 
 --3) Desenvolver um bloco PL/SQL que receba o nome completo e armazene somente o primeiro nome.
 
 set serveroutput on
-
+--accept nome  prompt "Mensagem personalizada"
+--set scan off
 declare
     v_nome varchar2(80);
 begin
@@ -55,3 +56,10 @@ end;
 
 --5) Desenvolver um bloco PL/SQL que receba uma data no formato 'dd/mm/yyyy' e imprima o dia da semana.
 
+set serveroutput on
+
+declare
+    v_date date := to_date('01/01/2018','dd/mm/yyyy');
+begin
+    dbms_output.put_line(to_char(v_date,'day'));
+end;
